@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #333;
+      margin: 0; padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 102, 160, 0.3);
+      text-align: center;
+      max-width: 450px;
+    }
+    .card img {
+      width: 200px; height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ff66a3;
+      margin-bottom: 20px;
+    }
+    .card p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="birthday_person.jpg" alt="Birthday Person"/>
+    <p>
+      Happy Birthday to my officially licensed jogra partner! 😜<br>
+      Tore chara amar kunu din complete lage na —<br>
+      Jogra kori, abar ek second e mishi jai.<br>
+      Tui jate sobsomoy ourokom baje bokhos, kintu bhalo o bashish! 😂<br>
+      May your day be full of cake, gifts, and no fight with me (at least today)! 💝
+    </p>
+  </div>
+</body>
+</html>

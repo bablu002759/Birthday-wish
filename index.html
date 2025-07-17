@@ -1,50 +1,25 @@
+
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday 🎉</title>
-  <style>
-    body {
-      background-color: #ffe6f0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: #333;
-      margin: 0; padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 102, 160, 0.3);
-      text-align: center;
-      max-width: 450px;
-    }
-    .card img {
-      width: 200px; height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ff66a3;
-      margin-bottom: 20px;
-    }
-    .card p {
-      font-size: 18px;
-      line-height: 1.5;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="card">
-    <img src="birthday_person.jpg" alt="Birthday Person"/>
-    <p>
+  <div class="container">
+    <h1>🎉 Happy Birthday! 🎉</h1>
+    <p class="wish">
       Happy Birthday to my officially licensed jogra partner! 😜<br>
-      Tore chara amar kunu din complete lage na —<br>
+      Tui chara amar kunu din complete lage na —<br>
       Jogra kori, abar ek second e mishi jai.<br>
       Tui jate sobsomoy ourokom baje bokhos, kintu bhalo o bashish! 😂<br>
       May your day be full of cake, gifts, and no fight with me (at least today)! 💝
     </p>
+    <img src="assets/images/birthday.png" alt="Birthday Image" />
+    <button onclick="playMusic()">🎵 Play Music</button>
   </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

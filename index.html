@@ -21,7 +21,7 @@
         background: #fffafa;
         box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         max-width: 400px;
-        min-height: 150px;
+        min-height: 180px;
         position: relative;
     }
     button {
@@ -32,7 +32,7 @@
         background: #ff69b4;
         color: white;
         cursor: pointer;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     h1 {
         color: #ff1493;
@@ -43,6 +43,8 @@
         min-height: 40px;
         font-size: 18px;
         line-height: 1.5;
+        text-align: center;
+        white-space: pre-line;
     }
     .fade-in {
         animation: fadeIn 3s ease forwards;
@@ -55,42 +57,52 @@
 </head>
 <body>
 
+<!-- Gift Box -->
 <div id="giftBox">
     <h1>🎁 A Special Gift for You 🎁</h1>
     <div class="typed-text" id="textBox"></div>
-    <button id="nextBtn" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(0)">Open Door 1</button>
 </div>
 
+<!-- Doors 1 to 6 -->
 <div class="door" id="door1">
     <div class="typed-text" id="textBox1"></div>
-    <button id="nextBtn1" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(1)">Next Door</button>
 </div>
 
 <div class="door" id="door2">
     <div class="typed-text" id="textBox2"></div>
-    <button id="nextBtn2" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(2)">Next Door</button>
 </div>
 
 <div class="door" id="door3">
     <div class="typed-text" id="textBox3"></div>
-    <button id="nextBtn3" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(3)">Next Door</button>
 </div>
 
 <div class="door" id="door4">
     <div class="typed-text" id="textBox4"></div>
-    <button id="nextBtn4" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(4)">Next Door</button>
 </div>
 
 <div class="door" id="door5">
     <div class="typed-text" id="textBox5"></div>
-    <button id="nextBtn5" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(5)">Next Door</button>
 </div>
 
 <div class="door" id="door6">
     <div class="typed-text" id="textBox6"></div>
-    <button id="nextBtn6" onclick="nextDoor()">click here 👇</button>
+    <p>click here 👇</p>
+    <button onclick="startTyping(6)">Next Door</button>
 </div>
 
+<!-- Final Surprise Door -->
 <div class="door" id="door7">
     <h1 class="fade-in">🎉 SURPRISE! 🎉</h1>
     <p class="fade-in">Ei 7 ta dorja banani oislo sudu tor lagi 💖<br>
@@ -111,7 +123,8 @@ const texts = [
 
 let currentDoor = 0;
 
-function typeText(elementId, text, speed = 40, callback) {
+// Typing effect function (slow)
+function typeText(elementId, text, speed = 100, callback) {
     const el = document.getElementById(elementId);
     el.innerHTML = "";
     let i = 0;
@@ -125,30 +138,29 @@ function typeText(elementId, text, speed = 40, callback) {
     }, speed);
 }
 
+// Start typing for specific door
+function startTyping(doorIndex){
+    showDoor(doorIndex);
+    const textBoxId = doorIndex === 0 ? 'textBox' : 'textBox'+doorIndex;
+    typeText(textBoxId, texts[doorIndex], 100); // slower typing
+}
+
+// Show specific door
 function showDoor(doorIndex){
-    // Hide all doors
     document.getElementById('giftBox').style.display = 'none';
     for(let i=1;i<=7;i++){
         let d = document.getElementById('door'+i);
         if(d) d.style.display = 'none';
     }
-
     if(doorIndex < 7){
         const doorId = doorIndex === 0 ? 'giftBox' : 'door'+doorIndex;
         document.getElementById(doorId).style.display = 'block';
-        const textBoxId = doorIndex === 0 ? 'textBox' : 'textBox'+doorIndex;
-        typeText(textBoxId, texts[doorIndex], 30);
     } else {
         document.getElementById('door7').style.display = 'block';
     }
 }
 
-function nextDoor(){
-    currentDoor++;
-    showDoor(currentDoor);
-}
-
-// First Door
+// Show first door initially
 showDoor(0);
 </script>
 

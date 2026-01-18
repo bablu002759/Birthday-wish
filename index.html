@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,84 +23,118 @@
         max-width: 400px;
         min-height: 150px;
         position: relative;
-    }
-    button {
-        padding: 12px 25px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        background: #ff69b4;
-        color: white;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-    h1 {
-        color: #ff1493;
-        margin-bottom: 15px;
-    }
-    .typed-text {
-        display: inline-block;
-        min-height: 40px;
-        font-size: 18px;
-        line-height: 1.5;
-    }
-    .fade-in {
-        animation: fadeIn 3s ease forwards;
-    }
-    @keyframes fadeIn {
-        0% {opacity:0; transform: scale(0.9);}
-        100% {opacity:1; transform: scale(1);}
-    }
+    }h1 {
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.typed-text {
+    display: inline-block;
+    min-height: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* CLICK HERE TEXT STYLE */
+.click-text {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff1493;
+    cursor: default;
+    font-weight: bold;
+}
+
+/* DOOR BUTTONS */
+.door-buttons {
+    margin-top: 15px;
+}
+
+.door-buttons button {
+    padding: 10px 18px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.door-buttons button:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+.fade-in {
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0; transform: scale(0.9);} 
+    100% {opacity:1; transform: scale(1);} 
+}
+
 </style>
 </head>
-<body>
-
-<div id="giftBox">
+<body><div id="giftBox">
     <h1>🎁 A Special Gift for You 🎁</h1>
-    <div class="typed-text" id="textBox"></div>
-    <button id="nextBtn" onclick="nextDoor()">click here 👇</button>
+    <div class="typed-text" id="textBox"></div><div class="click-text">click here 👇</div>
+<div class="door-buttons">
+    <button onclick="goToDoor(1)">Door 1</button>
+    <button onclick="goToDoor(2)">Door 2</button>
+    <button onclick="goToDoor(3)">Door 3</button>
+    <button onclick="goToDoor(4)">Door 4</button>
+    <button onclick="goToDoor(5)">Door 5</button>
+    <button onclick="goToDoor(6)">Door 6</button>
+    <button onclick="goToDoor(7)">Door 7</button>
 </div>
 
-<div class="door" id="door1">
+</div><div class="door" id="door1">
     <div class="typed-text" id="textBox1"></div>
-    <button id="nextBtn1" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door2">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(2)">Door 2</button>
+    </div>
+</div><div class="door" id="door2">
     <div class="typed-text" id="textBox2"></div>
-    <button id="nextBtn2" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door3">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(3)">Door 3</button>
+    </div>
+</div><div class="door" id="door3">
     <div class="typed-text" id="textBox3"></div>
-    <button id="nextBtn3" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door4">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(4)">Door 4</button>
+    </div>
+</div><div class="door" id="door4">
     <div class="typed-text" id="textBox4"></div>
-    <button id="nextBtn4" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door5">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(5)">Door 5</button>
+    </div>
+</div><div class="door" id="door5">
     <div class="typed-text" id="textBox5"></div>
-    <button id="nextBtn5" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door6">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(6)">Door 6</button>
+    </div>
+</div><div class="door" id="door6">
     <div class="typed-text" id="textBox6"></div>
-    <button id="nextBtn6" onclick="nextDoor()">click here 👇</button>
-</div>
-
-<div class="door" id="door7">
+    <div class="click-text">click here 👇</div>
+    <div class="door-buttons">
+        <button onclick="goToDoor(7)">Door 7</button>
+    </div>
+</div><div class="door" id="door7">
     <h1 class="fade-in">🎉 SURPRISE! 🎉</h1>
     <p class="fade-in">Ei 7 ta dorja banani oislo sudu tor lagi 💖<br>
     karon tui sei manus jare ekta msg dile amr mon ta muhurtei vala oijay 🤍✨</p>
-</div>
-
-<script>
+</div><script>
 // Texts for each door
 const texts = [
-    "Ei box ta sudu tor lagi 🤍\nkulte chaile nichor button o click kor ✨",
+    "Ei box ta sudu tor lagi 🤍\nkulte chaile nichor Door1o click kor ✨",
     "aij kew tor kotha mono koria haser 🙂",
     "kew tor dinta sundor korte char 🌷",
     "Notification o kewror nam deklei mon ta halka oijay 💛",
@@ -109,49 +143,49 @@ const texts = [
     "ou dorjar bitre sudu ekta chuto msg aslo 💌"
 ];
 
-let currentDoor = 0;
+let typingSpeed = 80; // SLOWER typing speed
 
-function typeText(elementId, text, speed = 40, callback) {
+function typeText(elementId, text) {
     const el = document.getElementById(elementId);
     el.innerHTML = "";
     let i = 0;
+
     const typer = setInterval(() => {
         el.innerHTML += text.charAt(i);
         i++;
-        if(i >= text.length){
+        if (i >= text.length) {
             clearInterval(typer);
-            if(callback) callback();
         }
-    }, speed);
+    }, typingSpeed);
 }
 
-function showDoor(doorIndex){
-    // Hide all doors
+function hideAll() {
     document.getElementById('giftBox').style.display = 'none';
-    for(let i=1;i<=7;i++){
-        let d = document.getElementById('door'+i);
-        if(d) d.style.display = 'none';
+    for (let i = 1; i <= 7; i++) {
+        const d = document.getElementById('door' + i);
+        if (d) d.style.display = 'none';
     }
+}
 
-    if(doorIndex < 7){
-        const doorId = doorIndex === 0 ? 'giftBox' : 'door'+doorIndex;
+function goToDoor(num) {
+    hideAll();
+
+    if (num === 0) {
+        document.getElementById('giftBox').style.display = 'block';
+        typeText('textBox', texts[0]);
+    } else if (num < 7) {
+        const doorId = 'door' + num;
+        const textBoxId = 'textBox' + num;
         document.getElementById(doorId).style.display = 'block';
-        const textBoxId = doorIndex === 0 ? 'textBox' : 'textBox'+doorIndex;
-        typeText(textBoxId, texts[doorIndex], 30);
+        typeText(textBoxId, texts[num]);
     } else {
         document.getElementById('door7').style.display = 'block';
     }
 }
 
-function nextDoor(){
-    currentDoor++;
-    showDoor(currentDoor);
-}
-
-// First Door
-showDoor(0);
-</script>
-
-</body>
-</html>
-
+// Start
+hideAll();
+document.getElementById('giftBox').style.display = 'block';
+typeText('textBox', texts[0]);
+</script></body>
+<bu
